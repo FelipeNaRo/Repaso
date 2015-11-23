@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.dam2.repaso.Repaso2">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/muestraNombre"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:text="Nombre:"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/nombre"
+        android:layout_below="@+id/muestraNombre"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textIsSelectable="false"
+        android:editable="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/muestraProvincia"
+        android:layout_below="@+id/nombre"
+        android:layout_alignParentStart="true"
+        android:text="Provincia:" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/provincia"
+        android:layout_below="@+id/muestraProvincia"
+        android:layout_alignParentStart="true"
+        android:spinnerMode="dropdown"
+        android:dropDownSelector="#020202" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/muestraLocalidad"
+        android:layout_below="@+id/provincia"
+        android:layout_alignParentStart="true"
+        android:text="Localidad:"
+        android:textColor="#020202" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/localidad"
+        android:layout_below="@+id/muestraLocalidad"
+        android:layout_alignParentStart="true"
+        android:spinnerMode="dropdown"
+        android:dropDownSelector="#020202"
+        android:foreground="#020202" />
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Quieres una notificación?"
+        android:id="@+id/nota"
+        android:layout_below="@+id/localidad"
+        android:layout_alignParentStart="false"
+        android:layout_alignEnd="@+id/localidad" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="continuar"
+        android:id="@+id/boton"
+        android:layout_below="@+id/nota"
+        android:layout_toEndOf="@+id/muestraNombre"
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="false" />
+</RelativeLayout>
